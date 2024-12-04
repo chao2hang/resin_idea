@@ -1,0 +1,23 @@
+<idea-plugin>
+  <name>Resin</name>
+  <id>com.intellij.resin</id>
+  <version>232.6734.9</version>
+  <!-- <idea-version since-build="232.6734" until-build="232.6734.*"/> -->
+  <idea-version since-build="232.6734" />
+  <depends>com.intellij.modules.java</depends>
+  <depends>com.intellij.modules.ultimate</depends>
+  <depends>com.intellij.javaee</depends>
+  <depends>com.intellij.javaee.app.servers.integration</depends>
+  <description>
+      允许直接从 IntelliJ IDEA 配置和使用 Resin 应用服务器,
+      用于部署和运行/调试 Web 应用程序。
+      可运用在最新版本idea中，Chaos修改。
+  </description>
+  <vendor>JetBrains</vendor>
+  <category>部署</category>
+  <extensions defaultExtensionNs="com.intellij">
+    <configurationType implementation="org.intellij.j2ee.web.resin.ResinConfigurationType"/>
+    <configurationProducer implementation="org.intellij.j2ee.web.resin.ResinConfigurationProducer"/>
+    <javaee.app.servers.integration.appServerIntegration implementation="org.intellij.j2ee.web.resin.ResinManager"/>
+  </extensions>
+</idea-plugin>
